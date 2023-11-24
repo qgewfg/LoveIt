@@ -3,6 +3,17 @@
 {{- with .Site.Params.verification.google -}}
     <meta name="google-site-verification" content="{{ . }}" />
 {{- end -}}
+{{- if .Site.Params.statistics.baidu.enable -}}
+    <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?48a60b943b2132593d01b08b0b7c35ef";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
+{{- end -}}
 {{- with .Site.Params.verification.bing -}}
     <meta name="msvalidate.01" content="{{ . }}" />
 {{- end -}}
